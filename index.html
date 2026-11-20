@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A responsive image gallery built with HTML, CSS and JavaScript.">
+  <title>Vista — Image Gallery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Vista home"><span class="brand-mark">V</span> vista<span class="brand-dot">.</span></a>
+    <p class="header-note">A little collection of beautiful places</p>
+    <a class="header-link" href="#gallery">Explore gallery <span aria-hidden="true">↘</span></a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> CURATED VISUAL STORIES</p>
+        <h1>Find beauty in<br><em>every frame.</em></h1>
+        <p class="hero-description">A collection of moments, colours and places that make you pause for a second.</p>
+        <a class="primary-link" href="#gallery">Explore the collection <span>↓</span></a>
+      </div>
+      <div class="hero-art" aria-label="Scenic mountain landscape">
+        <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1200&q=85" alt="Mountain lake surrounded by green hills">
+        <div class="image-caption"><span>01 / 12</span><span>THE GREAT OUTDOORS</span></div>
+      </div>
+      <div class="hero-side-note">COLLECT MOMENTS · NOT THINGS</div>
+    </section>
+
+    <section class="gallery-section" id="gallery">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">THE COLLECTION</p>
+          <h2>Visual <em>diary</em></h2>
+        </div>
+        <p class="photo-count"><strong id="visible-count">12</strong> photographs</p>
+      </div>
+
+      <div class="toolbar">
+        <div class="filters" role="group" aria-label="Filter images by category">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="nature">Nature</button>
+          <button class="filter-btn" data-filter="architecture">Architecture</button>
+          <button class="filter-btn" data-filter="travel">Travel</button>
+        </div>
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <input id="search-input" type="search" placeholder="Search photos..." aria-label="Search photos">
+        </label>
+      </div>
+
+      <div class="gallery-grid" id="gallery-grid">
+        <button class="gallery-card tall" data-category="nature" data-title="Quiet waters" data-location="Dolomites, Italy" data-index="0">
+          <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=85" alt="Lake and mountains at sunrise" loading="lazy">
+          <span class="card-overlay"><span class="card-category">NATURE</span><span class="card-title">Quiet waters ↗</span></span>
+        </button>
+        <button class="gallery-card" data-category="architecture" data-title="Lines of the city" data-location="Copenhagen, Denmark" data-index="1">
+          <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=900&q=85" alt="Minimal modern white architecture" loading="lazy">
+          <span class="card-overlay"><span class="card-category">ARCHITECTURE</span><span class="card-title">Lines of the city ↗</span></span>
+        </button>
+        <button class="gallery-card" data-category="travel" data-title="Coastal escape" data-location="Amalfi Coast, Italy" data-index="2">
+          <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=900&q=85" alt="Colourful coastal town beside the sea" loading="lazy">
+          <span class="card-overlay"><span class="card-category">TRAVEL</span><span class="card-title">Coastal escape ↗</span></span>
+        </button>
+        <button class="gallery-card wide" data-category="nature" data-title="Into the wild" data-location="British Columbia, Canada" data-index="3">
+          <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=85" alt="Sunlight passing through a green forest" loading="lazy">
+          <span class="card-overlay"><span class="card-category">NATURE</span><span class="card-title">Into the wild ↗</span></span>
+        </button>
+        <button class="gallery-card" data-category="architecture" data-title="Golden geometry" data-location="Marrakech, Morocco" data-index="4">
+          <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=900&q=85" alt="Geometric architectural detail" loading="lazy">
+          <span class="card-overlay"><span class="card-category">ARCHITECTURE</span><span class="card-title">Golden geometry ↗</span></span>
+        </button>
+        <button class="gallery-card" data-category="travel" data-title="Open road" data-location="Iceland" data-index="5">
+          <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=900&q=85" alt="Road winding through a dramatic landscape" loading="lazy">
+          <span class="card-overlay"><span class="card-category">TRAVEL</span><span class="card-title">Open road ↗</span></span>
+        </button>
+        <button class="gallery-card tall" data-category="nature" data-title="Desert silence" data-location="Sahara, Morocco" data-index="6">
+          <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=900&q=85" alt="Golden desert dunes" loading="lazy">
+          <span class="card-overlay"><span class="card-category">NATURE</span><span class="card-title">Desert silence ↗</span></span>
+        </button>
+        <button class="gallery-card" data-category="architecture" data-title="Modern symmetry" data-location="Singapore" data-index="7">
+          <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=900&q=85" alt="Modern building with clean geometric lines" loading="lazy">
+          <span class="card-overlay"><span class="card-category">ARCHITECTURE</span><span class="card-title">Modern symmetry ↗</span></span>
+        </button>
+        <button class="gallery-card" data-category="travel" data-title="Blue horizon" data-location="Greece" data-index="8">
+          <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=900&q=85" alt="Colourful village overlooking the sea" loading="lazy">
+          <span class="card-overlay"><span class="card-category">TRAVEL</span><span class="card-title">Blue horizon ↗</span></span>
+        </button>
+        <button class="gallery-card wide" data-category="nature" data-title="Mountain air" data-location="Swiss Alps" data-index="9">
+          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=85" alt="Snow-covered mountain peaks" loading="lazy">
+          <span class="card-overlay"><span class="card-category">NATURE</span><span class="card-title">Mountain air ↗</span></span>
+        </button>
+        <button class="gallery-card" data-category="architecture" data-title="Quiet details" data-location="Japan" data-index="10">
+          <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=900&q=85" alt="Traditional Japanese street and architecture" loading="lazy">
+          <span class="card-overlay"><span class="card-category">ARCHITECTURE</span><span class="card-title">Quiet details ↗</span></span>
+        </button>
+        <button class="gallery-card" data-category="travel" data-title="A new perspective" data-location="Bali, Indonesia" data-index="11">
+          <img src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=900&q=85" alt="Tropical travel landscape" loading="lazy">
+          <span class="card-overlay"><span class="card-category">TRAVEL</span><span class="card-title">A new perspective ↗</span></span>
+        </button>
+      </div>
+      <p class="empty-state" id="empty-state" hidden>No photos found. Try another search.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand" href="#"><span class="brand-mark">V</span> vista<span class="brand-dot">.</span></a>
+    <p>Made with curiosity & a love for good design.</p>
+    <span>© 2026 VISTA GALLERY</span>
+  </footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox-close" id="close-lightbox" aria-label="Close image viewer">×</button>
+    <button class="lightbox-nav previous" id="previous-image" aria-label="Previous image">‹</button>
+    <figure class="lightbox-figure">
+      <img id="lightbox-image" src="" alt="">
+      <figcaption><span id="lightbox-title"></span><span id="lightbox-location"></span></figcaption>
+    </figure>
+    <button class="lightbox-nav next" id="next-image" aria-label="Next image">›</button>
+    <div class="lightbox-counter" id="lightbox-counter">01 / 12</div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
